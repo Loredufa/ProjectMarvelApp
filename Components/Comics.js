@@ -30,7 +30,7 @@ export default function Comics({ listComics }) {
   }, []);
 
   return (
-    <View style={styles.container}>
+<View style={{flex: 1 }}>
       {
         isLoading 
           ? <ActivityIndicator size="large" color="#00ff00" /> 
@@ -55,7 +55,6 @@ export default function Comics({ listComics }) {
 
 const styles = StyleSheet.create({
     container: {
-    
-
+    flex:1,
     },
   })

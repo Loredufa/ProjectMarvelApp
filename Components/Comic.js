@@ -4,42 +4,32 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 export default function Comic({ name, image }) {
   return (
     <View style={styles.container}>
-    
-			<Image
-        style={styles.image}
-				source={{uri: image}}
-			/>
-			<Text style={styles.font}>{name}</Text>
-    
+            <Image style={styles.image} source={{uri: image}} />
+            <Text style={styles.title}>{name}</Text>
     </View>
   )
 }
-
 const styles = StyleSheet.create({
-    container: {
-      flex:1,
-     flexDirection: 'column',
-      boxShadow: "10px 10px 17px -12px rgba(0,0,0,0.75)",
-      display: 'flex',
-    justifyContent: 'space-between',
-    flexGrow: 1,
-    padding: 20,
-
-    },
-      font: {
-        fontSize: 20,
-        width: 200,           
-        color: '#0a0908',
-        padding: 10,
-        justifyContent: 'center',
-        textAlign: 'center',
-      },
-      image: {
-        justifyContent: 'center',
-        height:300,
-        width:200,
-        padding:10,
-        alignItems: 'center',
-      },    
-  });
+  container: {
+    width: 200,
+    height: 300,
+    backgroundColor: '#5bc0be',
+    alignItems: 'center',
+    borderRadius: 20,
+    margin: 5,
+  },
+  image: {
+    height: 250,
+    width: 200,
+    borderRadius: 20,
+    margin: 2,
+  },
+  title: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white', 
+    margin: 5,
+  },
+});
   

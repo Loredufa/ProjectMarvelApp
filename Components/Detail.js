@@ -30,7 +30,7 @@ export default function Detail({ route }) {
   return (
     <Tab.Navigator
       initialRouteName="Information"
-      tabBarOptions={{
+      screenOptions={{
         activeTintColor: 'darkred'
       }}
     >
@@ -48,7 +48,7 @@ export default function Detail({ route }) {
             : <Information 
                 image={`${data?.thumbnail?.path}.${data.thumbnail.extension}`}
                 name={data.name}
-                description={data.description} 
+                description={data.description?  data.description : "Super Hero" } 
               />
           )
         }
